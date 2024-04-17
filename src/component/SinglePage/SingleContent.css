@@ -1,0 +1,57 @@
+.media{
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+padding: 5px;
+margin: 5px 0;
+border-radius: 10px;
+background-color: rgb(60, 59, 59);
+font-family: "Monserrat",'sans-serif';
+cursor: pointer;
+}
+
+.poster{
+    border-radius: 10px;
+}
+
+.title{
+    width: 100%;
+  text-align: center;
+    font-family: "Monserrat",'sans-serif';
+    font-size: 17px;
+    padding: 4px 0;
+}
+.sunTitle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.media:hover{
+    background-color: #fff;
+    color:black;
+
+}
+
+
+ @media(max-width:550px){
+    .media{
+        width: 48%;
+       
+    }
+} 
+
+/* @media(max-width:550px){
+    .media{
+        background-color: blueviolet;
+    }
+} */
+
+
+
+
+
+
+
+
+
+
