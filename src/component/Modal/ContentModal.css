@@ -52,6 +52,7 @@ font-size: 19px;
 .ContentModal_PosterHorizontal{
     display: none;
     width: 38%;
+    
    
 }
 .ContentModal{
@@ -71,9 +72,9 @@ font-size:  3.5vw;
 }
 }
 
-
-
-
+.ContentModal_poster {
+border-radius: 8px;
+}
 
 
 

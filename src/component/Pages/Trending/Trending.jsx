@@ -40,7 +40,7 @@ function Trending() {
 
   return (
     <div>
-      <span className="trendingTitle">Trending movi</span>
+      <span className="trendingTitle">Trending now...</span>
       <div className="trending">
         {content &&
           content.map((movi) => (

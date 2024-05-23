@@ -9,7 +9,7 @@ import {
   img_300,
   unavailable,
 } from "../../config/config";
-import Carousel from '../Carousel/Carousel';
+import Carousel from "../Carousel/Carousel";
 import "./ContentModal.css";
 
 const style = {
@@ -33,7 +33,7 @@ export default function ContentModal({ id, children, media_type }) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const  apiMovieModal = async()=> {
+  const apiMovieModal = async () => {
     const options = {
       method: "GET",
       headers: {
@@ -53,10 +53,9 @@ export default function ContentModal({ id, children, media_type }) {
         setContent(data);
       })
       .catch((err) => console.error(err));
-  }
+  };
 
-  const apiVideo = async() =>{
-
+  const apiVideo = async () => {
     const options = {
       method: "GET",
       headers: {
@@ -76,17 +75,16 @@ export default function ContentModal({ id, children, media_type }) {
         setVideo(data.results[0]?.key);
       })
       .catch((err) => console.error(err));
-  }
-
+  };
 
   useEffect(() => {
     apiMovieModal();
     apiVideo();
-    
-    return() =>{
+
+    return () => {
       setContent([]);
       setVideo([]);
-    }
+    };
   }, []);
 
   return (
@@ -102,109 +100,56 @@ export default function ContentModal({ id, children, media_type }) {
         aria-describedby="keep-mounted-modal-description"
       >
         <Box sx={style}>
-         {content && (
-          <div className="ContentModal">
-           <img src={content.poster_path ? `${img_500}/${content.poster_path}` :unavailable}
-className="ContentModal_poster"
-          ></img> 
+          {content && (
+            <div className="ContentModal">
+              <img 
+                src={
+                  content.poster_path
+                    ? `${img_500}/${content.poster_path}`
+                    : unavailable
+                }
+                className="ContentModal_poster"
+              ></img>
 
-           <img src={content.backdrop_path ? `${img_300}/${content.backdrop_path}` :unavailable}
-          className="ContentModal_PosterHorizontal"
-          
-                    ></img> 
-                    <div className="Content_about">
-<div className="content_Title">
-  {content.name || content.title}(
-         {(content.release_date || content.last_air_date || "---").substring(0,4)}
-  )
-</div>
-<div className="tagline">
-  
-  <i>{content.tagline}</i>
-</div>
-<div className="contentDescription">{content.overview}</div>
-<Carousel id={id} media_type={media_type} />
-<Button
-        className="btnClass" target="_blank"
-        href={`https://www.youtube.com/watch?v=${video}`}
-         variant="contained"  startIcon={<YouTubeIcon />}
-                   > Watch the movie</Button>
-                    </div>
-                    </div>
-         )}
-         
-
+              <img
+                src={
+                  content.backdrop_path
+                    ? `${img_300}/${content.backdrop_path}`
+                    : unavailable
+                }
+                className="ContentModal_PosterHorizontal"
+              ></img>
+              <div className="Content_about">
+                <div className="content_Title">
+                  {content.name || content.title}(
+                  {(
+                    content.release_date ||
+                    content.last_air_date ||
+                    "---"
+                  ).substring(0, 4)}
+                  )
+                </div>
+                <div className="tagline">
+                  <i>{content.tagline}</i>
+                </div>
+                <div className="contentDescription">{content.overview}</div>
+                <Carousel id={id} media_type={media_type} />
+                <Button
+                  className="btnClass"
+                  target="_blank"
+                  href={`https://www.youtube.com/watch?v=${video}`}
+                  variant="contained"
+                  startIcon={<YouTubeIcon />}
+                >
+                  {" "}
+                  Watch the trailer
+                </Button>
+              </div>
+            </div>
+          )}
         </Box>
       </Modal>
     </div>
   );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// {content && (
-//   <div className="ContentModal">
-//     <img
-//       src={
-//         content.poster_path
-//           ? `${img_300}/${content.poster_path}`
-//           : unavailable
-//       }
-//       alt={content.title || content.name}
-//       className="ContentModal_portrait"
-//     ></img>
-
-//     <img
-//       src={
-//         content.backdrop_path
-//           ? `${img_500}/${content.backdrop_path}`
-//           : unavailable
-//       }
-//       alt={content.title || content.name}
-//       className="ContentModal_gorizont_portrait"
-//     ></img>
-
-//     <div className="ContentModal_about">
-//       <span className="Content_title">
-//         {content.name || content.title}(
-//         {(
-//           content.release_date ||
-//           content.release_date ||
-//           "----"
-//         ).substring(0, 4)}
-//         )
-//       </span>
-//       {content.tagline && (
-//         <i className="tagline">{content.tagline}</i>
-//       )}
-//       <span className="ContentModal_Description">
-//         {content.overview}
-//       </span>
-//       <Button
-//         className="btnClass"
-//         variant="contained"
-//         startIcon={<YouTubeIcon />}
-//         target="_blank"
-//         href="https://www.youtube.com/"
-//         color="primary"
-//       >
-//         Watch the trailer
-//       </Button>
-//     </div>
-//   </div>
-// )}
