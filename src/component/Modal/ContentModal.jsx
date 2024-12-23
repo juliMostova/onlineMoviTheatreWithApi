@@ -109,7 +109,7 @@ export default function ContentModal({ id, children, media_type }) {
                     : unavailable
                 }
                 className="ContentModal_poster"
-              ></img>
+               alt="photo"></img>
 
               <img
                 src={

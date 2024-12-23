@@ -44,6 +44,7 @@ message:'Type correct email,try again'
               }
             })}
           />
+        
        
   <div>
     {

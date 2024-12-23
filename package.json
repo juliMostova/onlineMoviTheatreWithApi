@@ -2,6 +2,7 @@
   "name": "test-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://juliMostova.github.io/onlineMoviTheatreWithApi",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -21,6 +22,7 @@
     "react-hook-form": "^7.50.1",
     "react-router-dom": "^6.22.1",
     "react-scripts": "5.0.1",
+    "react-scroll": "^1.9.0",
     "react-test-renderer": "^18.3.1",
     "web-vitals": "^2.1.4"
   },
@@ -30,7 +32,8 @@
     "server": "json-server -w server/db.json -p 3001",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -53,6 +56,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "autoprefixer": "^10.4.17",
+    "gh-pages": "^6.2.0",
     "json-server": "^1.0.0-alpha.23",
     "postcss": "^8.4.35"
   }
