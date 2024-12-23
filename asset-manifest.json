@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.6965fd3d.css",
-    "main.js": "/static/js/main.62ec5b1f.js",
-    "index.html": "/index.html",
-    "main.6965fd3d.css.map": "/static/css/main.6965fd3d.css.map",
-    "main.62ec5b1f.js.map": "/static/js/main.62ec5b1f.js.map"
+    "main.css": "/onlineMoviTheatreWithApi/static/css/main.6965fd3d.css",
+    "main.js": "/onlineMoviTheatreWithApi/static/js/main.62ec5b1f.js",
+    "index.html": "/onlineMoviTheatreWithApi/index.html",
+    "main.6965fd3d.css.map": "/onlineMoviTheatreWithApi/static/css/main.6965fd3d.css.map",
+    "main.62ec5b1f.js.map": "/onlineMoviTheatreWithApi/static/js/main.62ec5b1f.js.map"
   },
   "entrypoints": [
     "static/css/main.6965fd3d.css",
